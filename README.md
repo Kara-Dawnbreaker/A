@@ -4,9 +4,9 @@ An experimental, multi-station browser application. This repository is the clean
 
 ## Current status
 
-**Phase 0 — Repository foundation**
+**Phase 1 — Core application framework**
 
-The current build contains only the development foundation and a minimal application shell. The eight stations and shared product systems are not implemented yet.
+The application now has a responsive shell, an eight-station registry, desktop and mobile navigation, hash-based station routes, a station directory overview, and honest not-yet-installed station screens. The stations themselves and shared product systems are scheduled for later phases.
 
 ## Technology
 
@@ -15,6 +15,7 @@ The current build contains only the development foundation and a minimal applica
 - Vite 6
 - Tailwind CSS 4 through the official Vite plugin
 - ESLint 9
+- Browser-native hash navigation (no routing dependency)
 
 ## Requirements
 
@@ -35,6 +36,19 @@ npm run lint
 npm run typecheck
 npm run build
 ```
+
+## Application structure
+
+- `src/app` — application composition
+- `src/components/layout` — shared shell, sidebar, top bar and mobile navigation
+- `src/components/navigation` — reusable station navigation
+- `src/components/stations` — station cards and not-yet-installed screens
+- `src/config` — central station registry
+- `src/hooks` — application hooks, including hash-route synchronization
+- `src/pages` — top-level pages
+- `src/types` — shared TypeScript contracts
+- `src/utils` — route parsing and route serialization
+- `src/styles` — global design tokens and responsive application styles
 
 ## Project principles
 
